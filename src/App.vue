@@ -1,11 +1,10 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppHeader from './components/AppHeader.vue';
 
 export default {
   data() {
     return {
-      message: 'Template Vite + Vue'
+
     }
   },
 
@@ -15,24 +14,15 @@ export default {
 }
 </script>
 
-<template> 
-  <header>
-    <h1> 
+<template>
+  <div>
+    <header>
         <AppHeader />
-    </h1>
-  </header>
+    </header>
+  </div> 
 </template>
 
-<style lang="scss" scoped>
-@use 'assets/scss/main.scss' as *;
+<style scoped>
 
-header {
-    background-color: aquamarine;
-    text-align: center;
-}
-
-h1 {
-    color: lightcoral;
-}
 </style>
 
