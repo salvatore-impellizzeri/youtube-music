@@ -20,8 +20,8 @@ export default {
 
 <template> 
   <div 
-    class="flex justify-between fixed top-0 h-16 w-full text-white items-center pl-4 pr-28 z-10"
-    :class="[store.scrollPosition > 0 ? 'bg-transparent' : 'bg-black border-b border-white/15']"
+    class="flex justify-between fixed top-0 h-16 w-full text-white items-center pl-4 pr-28 z-10 transition-all ease-in-out duration-200"
+    :class="[store.scrollPosition > 0 ? 'bg-transparent border-b border-transparent' : 'bg-black border-b border-white/15']"
   >
     <div class="flex gap-3 items-center w-4/12">
       <button class="rounded-full w-[40px] aspect-square hover:bg-white/15 transition-all duration-200 ease-in-out">

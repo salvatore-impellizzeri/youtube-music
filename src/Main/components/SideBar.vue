@@ -41,8 +41,8 @@ export default {
 
 <template>
   <div 
-    class="w-[72px] fixed left-0 top-0 h-screen pt-16"
-    :class="[store.scrollPosition > 0 ? 'bg-transparent' : 'bg-black border-r border-white/15']"
+    class="w-[72px] fixed left-0 top-0 h-screen pt-16 transition-all ease-in-out duration-200"
+    :class="[store.scrollPosition > 0 ? 'bg-transparent border-r border-transparent' : 'bg-black border-r border-white/15']"
   >
     <div class="py-2">
         <button 
