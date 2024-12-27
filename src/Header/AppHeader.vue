@@ -1,23 +1,37 @@
 <script>
+import { store } from '../store';
 
 export default {
   data() {
     return {
-
+      store
     }
-  }
+  },
+
+  mounted() {
+    store.initScrollListener(); 
+  },
+
+  beforeDestroy() {
+    store.removeScrollListener();
+  },
 }
 </script>
 
 <template> 
-  <div class="bg-black flex justify-between border-b border-white/15 h-16 w-full text-white items-center pl-7 pr-28">
-    <div class="flex gap-6 items-center w-4/12">
-      <i class="fa-solid fa-bars scale-125"></i>
-      <div>
+  <div 
+    class="flex justify-between fixed top-0 h-16 w-full text-white items-center pl-4 pr-28 z-10"
+    :class="[store.scrollPosition > 0 ? 'bg-transparent' : 'bg-black border-b border-white/15']"
+  >
+    <div class="flex gap-3 items-center w-4/12">
+      <button class="rounded-full w-[40px] aspect-square hover:bg-white/15 transition-all duration-200 ease-in-out">
+        <i class="fa-solid fa-bars scale-125"></i>
+      </button>
+      <button>
         <img src="/logo.png" class="scale-90" alt="logo">
-      </div>
+      </button>
     </div>
-    <div class="px-4 w-11/12">
+    <div class="px-5 w-11/12">
       <div class="relative">
         <i class="absolute left-5 top-1/2 transform -translate-y-1/2 text-[#aaa] w-4 h-4 fa-solid fa-magnifying-glass"></i>
         <input
